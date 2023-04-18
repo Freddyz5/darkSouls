@@ -1,0 +1,92 @@
+:root{
+}
+/***********************************/
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    vertical-align: baseline;
+    scroll-behavior: smooth;
+}
+img , figure{
+    max-width: 100%;
+    display: flex;
+    object-fit: cover;
+    object-position: center center;
+}
+h1, h2, h3, h4 {
+}
+p{
+}
+a{
+    text-decoration: none;
+}
+html{
+    /* overflow-x: hidden; */
+}
+body {
+}
+/***********************************/
+.header{
+}
+.header .figure{
+}
+.header .svgLogo{
+    background-color: aqua;
+    
+}
+.header .gLogo{
+}
+
+.main{}
+.main .figure{}
+.main .img{}
+.main .p{}
+
+.footer{}
+.footer .div{}
+
+
+
+
+/* body { 
+    background-color: rgb(0, 0, 0);
+    color: white;
+    background-image: url(https://images2.alphacoders.com/895/895681.jpg);
+    background-size: 100%;
+    background-attachment: fixed;    
+    text-align: center; 
+}
+.caja{
+    padding: 10px;
+    margin: auto;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.096), rgb(255, 157, 52, 0.096));
+    text-align: justify;    
+    border-radius: 4px;
+    width: 600px;
+}
+#espacio{
+    padding: 300px;
+}
+a{
+    background-color: rgba(255, 157, 52, 0.274);
+    padding: 3px;
+    border: solid 1px;
+    border-radius: 3px;
+    transition: 0.3s;
+}
+a:link{
+    color: rgb(255, 157, 52);
+}
+a:visited{
+    color: rgb(0, 0, 0)
+}
+a:hover{
+    transform: scale(3, 3);
+    color: azure;
+    background-color: rgb(255, 157, 52, 0.096);
+}
+a:active{
+    color: rgb(201, 90, 0);
+} */
