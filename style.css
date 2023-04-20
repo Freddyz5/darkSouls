@@ -40,8 +40,10 @@ body {
     position: fixed;
     top: 25%;
     /* transform: translate(-50%, -50%); */
-    stroke-width: 1.2em;
-    /* filter: drop-shadow(0 0 1em #d1a392); */
+    stroke: #ec9633;
+    /* stroke-width: 2em; */
+    stroke-opacity: 0.5;
+    /* filter: drop-shadow(0 0 10px #ffdfd4) blur(10px); */
 }
 .header .gLogo{
 }
