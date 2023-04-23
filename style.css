@@ -1,6 +1,20 @@
 :root{
 }
 /***********************************/
+@font-face {
+    font-family: 'darkSouls';
+    /*? Liver Server OFF */
+    src: url('font/Optimus-Princeps-Font/OptimusPrinceps.ttf');
+    font-weight: normal;
+    font-style: normal;
+}    
+@font-face {
+    font-family: 'darkSoulsBold';
+    /*? Liver Server OFF */
+    src: url('font/Optimus-Princeps-Font/OptimusPrincepsSemiBold.ttf');
+    font-weight: bold;
+    font-style: bold; */
+}
 * {
     margin: 0;
     padding: 0;
@@ -27,6 +41,7 @@ html{
 }
 body {
     background-color: #140e15;
+    font-family: 'darkSouls';
 }
 /***********************************/
 .header{
@@ -39,13 +54,15 @@ body {
     padding: auto;
     position: fixed;
     top: 25%;
-    /* transform: translate(-50%, -50%); */
     stroke: #ec9633;
-    /* stroke-width: 2em; */
     stroke-opacity: 0.5;
-    /* filter: drop-shadow(0 0 10px #ffdfd4) blur(10px); */
 }
-.header .gLogo{
+.p{
+    position: fixed;
+    top: 65%;
+    left: 40%;
+    transform: translateX(50%) scale(1.5);
+    color: #ec9633;
 }
 
 .main{}

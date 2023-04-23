@@ -1,10 +1,11 @@
-const logo = document.querySelector('.svgLogo');
+const logo = document.querySelector('.svgLogo')
+const header = document.querySelector('.header');
 addEventListener("keydown", function(e) {
     e.preventDefault();
     if ( e.code == 'Enter') {
-        logo.style.visibility = 'hidden';
+        header.style.visibility = 'hidden';
     }if ( e.code == 'Escape') {
-        logo.style.visibility = 'visible';
+        header.style.visibility = 'visible';
     }
 });
 
