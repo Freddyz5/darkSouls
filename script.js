@@ -1,11 +1,16 @@
 const logo = document.querySelector('.svgLogo')
-const header = document.querySelector('.header');
+const intro = document.querySelector('.intro');
+var executed = false;
+
 addEventListener("keydown", function(e) {
     e.preventDefault();
-    if ( e.code == 'Enter') {
-        header.style.visibility = 'hidden';
+    if ( e.code == 'Enter' && executed == true) {
+        intro.style.transition = '1.5s';
+        intro.style.opacity = '0'
+        intro.style.visibility = 'hidden';
     }if ( e.code == 'Escape') {
-        header.style.visibility = 'visible';
+        intro.style.visibility = 'visible';
+        intro.style.opacity = '1';
     }
 });
 
@@ -15,9 +20,12 @@ anime ({
     opacity: [1, 0],
     update: function(anim){
         logo.style.filter = 'drop-shadow(0 0 '+ anim.progress / 10 +'px #d1a392) blur(' + anim.progress / 50 + 'px)';
-        logo.style.strokeWidth = (anim.progress / 50) + 0.7 + 'em';
+        logo.style.strokeWidth = (anim.progress / 50) + 1 + 'em';
+        if (anim.progress <= 50) {
+            executed = true;
+        };
     },
     easing: 'easeInExpo',
     duration: 11000,
     direction: 'reverse',
-});
+})
