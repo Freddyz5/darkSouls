@@ -13,7 +13,7 @@
     /*? Liver Server OFF */
     src: url('font/Optimus-Princeps-Font/OptimusPrincepsSemiBold.ttf');
     font-weight: bold;
-    font-style: bold; */
+    font-style: bold;
 }
 * {
     margin: 0;
@@ -44,11 +44,12 @@ body {
 }
 /***********************************/
 .intro{
-    position:fixed;
+    position: fixed;
     top: 0%;
     bottom: 0%;
     display: grid;
     background-color: #140e15;
+    z-index: 10;
 }
 .intro .figure{
     display: flex;
@@ -76,18 +77,93 @@ body {
 }
 /***********************************/
 .main{
-    display: grid;
+}
+.main .div{
+    height: 100%;
+    overflow: hidden;
 }
 .main .figure{
-    justify-content: center;
+    display: grid;
+    place-items: center;
 }
 .main .img{
-    width: 100%;
+    object-view-box: inset(11% 0% 0% 0%);
 }
-.main .p{
-    background-color: #2b2b2a;
+.main .caption{
+    position: absolute;
+    top: 21vw;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    font-size: 3.5vw;
+    color: #f0eaf2;
+    text-shadow:  #ec9633 0 0 5px;
+}
+.main .fire{
+    position: absolute;
+    top: 41vw;
+    left: 50%;
+    border-radius: 10px;
+    width: 20px;
+    height: 20px;
+    background-color: #ff00ff;
+}
+@media screen and (max-width: 1200px) {
+    .main .div{
+        height: 92vw;
+    }
+    .main .img{
+        height: 200%;
+        object-view-box: inset(-11% 0% 0% 0%);
+    }
+    .main .caption{
+        top: 35vw;
+        font-size: 5.5vw;
+        white-space: nowrap;
+    }
+    .main .fire {
+        top: 75vw;
+    }
+    @media screen and (max-width: 900px) {
+        .main .div{
+            height: 134vw;
+        }
+        .main .img{
+            height: 300%;
+            object-view-box: inset(-22% 0% 0% 0%);
+        }
+        .main .caption{
+            top: 50vw;
+            font-size: 7vw;
+            white-space: nowrap;
+        }
+        .main .fire {
+            top: 110vw;
+        }
+    }
+}
+/* 
+!gradientes
+background: rgb(13,11,7);
+background: linear-gradient(90deg, rgba(9,8,4,1) 0%, rgba(103,73,47,1) 51%, rgba(9,8,4,1) 100%);
+background: radial-gradient(circle, rgba(9,8,4,1) 0%, rgba(103,73,47,1) 51%, rgba(9,8,4,1) 100%);
+background: radial-gradient(circle, rgba(9,8,4,1) 0%, rgba(103,73,47,1) 0%, rgba(103,73,47,1) 2%, rgba(9,8,4,1) 100%);
+*/
+.content{
+    height: 500px;
+    display: flex;
+    background: rgb(13,11,7);
+    background: linear-gradient(90deg, rgba(9,8,4,1) 0%, rgba(103,73,47,1) 51%, rgba(9,8,4,1) 100%);
+}
+.content .p{
+    margin: auto;
+    width: 50vw;
+    font-size: 2vw;
+    color: #ec9633;
     text-align: center;
 }
+
+
 
 .footer{}
 .footer .div{}
