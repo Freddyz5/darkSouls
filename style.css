@@ -1,6 +1,3 @@
-:root{
-}
-/***********************************/
 @font-face {
     font-family: 'darkSouls';
     /*? Liver Server OFF */
@@ -28,23 +25,6 @@ img , figure{
     display: flex;
     object-fit: cover;
     object-position: center center;
-}
-h1, h2, h3, h4 {
-}
-p{
-}
-a{
-    text-decoration: none;
-}
-html{
-    /* overflow-x: hidden; */
-    /* 
-    !gradientes
-    background: linear-gradient(90deg, rgba(9,8,4,1) 0%, rgba(103,73,47,1) 51%, rgba(9,8,4,1) 100%);
-    background: radial-gradient(circle, rgba(9,8,4,1) 0%, rgba(103,73,47,1) 51%, rgba(9,8,4,1) 100%);
-    background: rgb(13,11,7);
-    background: radial-gradient(circle, rgba(9,8,4,1) 0%, rgba(103,73,47,1) 0%, rgba(103,73,47,1) 2%, rgba(9,8,4,1) 100%);
-    */
 }
 body {
     font-family: 'darkSouls';
@@ -126,32 +106,34 @@ body {
     background-color: #ff00ff;
 }
 /***********************************/
-
 .content{
-    height: 45vw;
     display: grid;
+    width: 44%;
+    height: 100%;
+    margin: auto 1vw;
+    padding: 4vw;
+    gap: 4vw;
 }
 .content .p{
-    background-color: #ff00ff5b;
-    position: relative;
-    inset: 5vw 0 0 6vw;
     text-align: justify;
-    width: 23em;/*!cambiar en el responsive*/
-    height: 11em;
-    font-size: 1.4em;
+    width: 35vw;
+    font-size: 1.5vw;
     text-shadow:  #ec9633 0 0 5px;
     color: #f0eaf2;
+    
+    background-color: #0000004b;
+    padding: 0.5em;
+    border-radius: 0.2em;
+}
+.content .empty{
+    width: 0;
+    height: 0;
 }
 .content .video{
-    position: relative;
-    inset: 5vw 0 0 6vw;
-    width: 35em;
-    height: 18em;
-    background-color: #ff000067;
+    width: 35vw;
+    height: 20vw;
 }
-
 /***********************************/
-
 .footer{
     position: relative;
 }
@@ -173,51 +155,7 @@ body {
     background-color: #5A290B;
     border-bottom: 0;
 }
-
-
-
-
-/* body { 
-    background-color: rgb(0, 0, 0);
-    color: white;
-    background-image: url(https://images2.alphacoders.com/895/895681.jpg);
-    background-size: 100%;
-    background-attachment: fixed;    
-    text-align: center; 
-}
-.caja{
-    padding: 10px;
-    margin: auto;
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.096), rgb(255, 157, 52, 0.096));
-    text-align: justify;    
-    border-radius: 4px;
-    width: 600px;
-}
-#espacio{
-    padding: 300px;
-}
-a{
-    background-color: rgba(255, 157, 52, 0.274);
-    padding: 3px;
-    border: solid 1px;
-    border-radius: 3px;
-    transition: 0.3s;
-}
-a:link{
-    color: rgb(255, 157, 52);
-}
-a:visited{
-    color: rgb(0, 0, 0)
-}
-a:hover{
-    transform: scale(3, 3);
-    color: azure;
-    background-color: rgb(255, 157, 52, 0.096);
-}
-a:active{
-    color: rgb(201, 90, 0);
-} */
-
+/***********************************/
 @media screen and (max-width: 1200px) {
     body {
         background-size: 149vw;
@@ -238,9 +176,14 @@ a:active{
     .main .fire {
         top: 75vw;
     }
-    /* .footer .a{
-        font-size: 1.9vw;
-    } */
+    .content .p{
+        width: 40vw;
+        font-size: 1.7vw;
+    }
+    .content .video{
+        width: 40vw;
+        height: 23vw;
+    }
     @media screen and (max-width: 900px) {
         body {
             background-size: 250vw;
@@ -261,8 +204,21 @@ a:active{
         .main .fire {
             top: 110vw;
         }
-        /* .footer .a{
+        .content{
+            width: 100%;
+            place-items: center;
+        }
+        .content .empty{
+            width: 100%;
+            height: 20em;
+        }
+        .content .p{
+            width: 100%;
             font-size: 3vw;
-        } */
+        }
+        .content .video{
+            width: 100%;
+            height: 50vw;
+        }
     }
 }
