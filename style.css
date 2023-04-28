@@ -38,9 +38,23 @@ a{
 }
 html{
     /* overflow-x: hidden; */
+    /* 
+    !gradientes
+    background: linear-gradient(90deg, rgba(9,8,4,1) 0%, rgba(103,73,47,1) 51%, rgba(9,8,4,1) 100%);
+    background: radial-gradient(circle, rgba(9,8,4,1) 0%, rgba(103,73,47,1) 51%, rgba(9,8,4,1) 100%);
+    background: rgb(13,11,7);
+    background: radial-gradient(circle, rgba(9,8,4,1) 0%, rgba(103,73,47,1) 0%, rgba(103,73,47,1) 2%, rgba(9,8,4,1) 100%);
+    */
 }
 body {
     font-family: 'darkSouls';
+    background-color: #000000;
+    background-image: url('https://images3.alphacoders.com/154/154277.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    object-fit: cover;
+    background-size: 115vw;
+    background-position: 0% 50%;
 }
 /***********************************/
 .intro{
@@ -62,10 +76,10 @@ body {
     stroke-opacity: 0.5;
 }
 .intro .caption{
-    font-size: 2.5vw;
-    text-shadow:  #ec9633 0 0 5px;
     margin: 0 auto;
     text-align: center;
+    font-size: 2.5vw;
+    text-shadow:  #ec9633 0 0 5px;
     color: #f0eaf2;
 }
 .intro .p{
@@ -81,6 +95,8 @@ body {
 .main .div{
     height: 100%;
     overflow: hidden;
+    box-shadow: 0 2px 8px #CA9F72;
+    margin-bottom: 2px;
 }
 .main .figure{
     display: grid;
@@ -88,6 +104,7 @@ body {
 }
 .main .img{
     object-view-box: inset(11% 0% 0% 0%);
+    border: 1px solid #62615C;
 }
 .main .caption{
     position: absolute;
@@ -108,65 +125,54 @@ body {
     height: 20px;
     background-color: #ff00ff;
 }
-@media screen and (max-width: 1200px) {
-    .main .div{
-        height: 92vw;
-    }
-    .main .img{
-        height: 200%;
-        object-view-box: inset(-11% 0% 0% 0%);
-    }
-    .main .caption{
-        top: 35vw;
-        font-size: 5.5vw;
-        white-space: nowrap;
-    }
-    .main .fire {
-        top: 75vw;
-    }
-    @media screen and (max-width: 900px) {
-        .main .div{
-            height: 134vw;
-        }
-        .main .img{
-            height: 300%;
-            object-view-box: inset(-22% 0% 0% 0%);
-        }
-        .main .caption{
-            top: 50vw;
-            font-size: 7vw;
-            white-space: nowrap;
-        }
-        .main .fire {
-            top: 110vw;
-        }
-    }
-}
-/* 
-!gradientes
-background: rgb(13,11,7);
-background: linear-gradient(90deg, rgba(9,8,4,1) 0%, rgba(103,73,47,1) 51%, rgba(9,8,4,1) 100%);
-background: radial-gradient(circle, rgba(9,8,4,1) 0%, rgba(103,73,47,1) 51%, rgba(9,8,4,1) 100%);
-background: radial-gradient(circle, rgba(9,8,4,1) 0%, rgba(103,73,47,1) 0%, rgba(103,73,47,1) 2%, rgba(9,8,4,1) 100%);
-*/
+/***********************************/
+
 .content{
-    height: 500px;
-    display: flex;
-    background: rgb(13,11,7);
-    background: linear-gradient(90deg, rgba(9,8,4,1) 0%, rgba(103,73,47,1) 51%, rgba(9,8,4,1) 100%);
+    height: 45vw;
+    display: grid;
 }
 .content .p{
-    margin: auto;
-    width: 50vw;
-    font-size: 2vw;
-    color: #ec9633;
-    text-align: center;
+    background-color: #ff00ff5b;
+    position: relative;
+    inset: 5vw 0 0 6vw;
+    text-align: justify;
+    width: 23em;/*!cambiar en el responsive*/
+    height: 11em;
+    font-size: 1.4em;
+    text-shadow:  #ec9633 0 0 5px;
+    color: #f0eaf2;
+}
+.content .video{
+    position: relative;
+    inset: 5vw 0 0 6vw;
+    width: 35em;
+    height: 18em;
+    background-color: #ff000067;
 }
 
+/***********************************/
 
-
-.footer{}
-.footer .div{}
+.footer{
+    position: relative;
+}
+.footer .div{
+    display: grid;
+    place-items: center;
+    padding: 1em 18vw;
+    grid-template-columns: repeat(auto-fit, minmax( min(150px), 1fr));
+}
+.footer .a{
+    padding: 0 2vw;
+    font-size: 1.5em;
+    text-shadow:  #ec9633 0 0 5px;
+    color: #f0eaf2;
+    border-bottom: 1px groove #513D34;
+}
+.footer .a:hover{
+    border-radius: 1px;
+    background-color: #5A290B;
+    border-bottom: 0;
+}
 
 
 
@@ -211,3 +217,52 @@ a:hover{
 a:active{
     color: rgb(201, 90, 0);
 } */
+
+@media screen and (max-width: 1200px) {
+    body {
+        background-size: 149vw;
+        background-position: 20% 50%;
+    }
+    .main .div{
+        height: 92vw;
+    }
+    .main .img{
+        height: 200%;
+        object-view-box: inset(-11% 0% 0% 0%);
+    }
+    .main .caption{
+        top: 35vw;
+        font-size: 5.5vw;
+        white-space: nowrap;
+    }
+    .main .fire {
+        top: 75vw;
+    }
+    /* .footer .a{
+        font-size: 1.9vw;
+    } */
+    @media screen and (max-width: 900px) {
+        body {
+            background-size: 250vw;
+            background-position: 40% 40%;
+        }
+        .main .div{
+            height: 134vw;
+        }
+        .main .img{
+            height: 300%;
+            object-view-box: inset(-22% 0% 0% 0%);
+        }
+        .main .caption{
+            top: 50vw;
+            font-size: 7vw;
+            white-space: nowrap;
+        }
+        .main .fire {
+            top: 110vw;
+        }
+        /* .footer .a{
+            font-size: 3vw;
+        } */
+    }
+}
