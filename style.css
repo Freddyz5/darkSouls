@@ -29,12 +29,6 @@ img , figure{
 body {
     font-family: 'darkSouls';
     background-color: #000000;
-    background-image: url('https://images3.alphacoders.com/154/154277.jpg');
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    object-fit: cover;
-    background-size: 115vw;
-    background-position: 0% 50%;
 }
 /***********************************/
 .intro{
@@ -70,8 +64,6 @@ body {
     color: #f0eaf2;
 }
 /***********************************/
-.main{
-}
 .main .div{
     height: 100%;
     overflow: hidden;
@@ -84,7 +76,6 @@ body {
 }
 .main .img{
     object-view-box: inset(11% 0% 0% 0%);
-    border: 1px solid #62615C;
 }
 .main .caption{
     position: absolute;
@@ -106,13 +97,21 @@ body {
     background-color: #ff00ff;
 }
 /***********************************/
+.section{
+    background-image: url('https://images3.alphacoders.com/154/154277.jpg');
+    background-repeat: no-repeat;
+    object-fit: cover;
+    background-size: 130%;
+    background-position: 0% 20%;
+}
 .content{
+    position: relative;
     display: grid;
     width: 44%;
     height: 100%;
     margin: auto 1vw;
     padding: 4vw;
-    gap: 4vw;
+    gap: 3vw;
 }
 .content .p{
     text-align: justify;
@@ -157,10 +156,6 @@ body {
 }
 /***********************************/
 @media screen and (max-width: 1200px) {
-    body {
-        background-size: 149vw;
-        background-position: 20% 50%;
-    }
     .main .div{
         height: 92vw;
     }
@@ -176,19 +171,24 @@ body {
     .main .fire {
         top: 75vw;
     }
+    .section{
+        height: 85vw;
+        background-size: 170%;
+        background-position: 20% 50%;
+    }
     .content .p{
         width: 40vw;
+        height: fit-content;
         font-size: 1.7vw;
     }
     .content .video{
         width: 40vw;
         height: 23vw;
     }
+    .footer{
+        bottom: 5.5em;
+    }
     @media screen and (max-width: 900px) {
-        body {
-            background-size: 250vw;
-            background-position: 40% 40%;
-        }
         .main .div{
             height: 134vw;
         }
@@ -204,13 +204,22 @@ body {
         .main .fire {
             top: 110vw;
         }
+        .section{
+            background-color: aqua;
+            height: 150vw;
+            background-size: 300%;
+            background-position: 45% 100%;
+        }
         .content{
-            width: 100%;
+            width: 99%;
             place-items: center;
+            bottom: 20vw;
+            gap: 0;
+            padding: 11vw;
         }
         .content .empty{
             width: 100%;
-            height: 20em;
+            height: 15vw;
         }
         .content .p{
             width: 100%;
@@ -219,6 +228,9 @@ body {
         .content .video{
             width: 100%;
             height: 50vw;
+        }
+        .footer{
+            bottom: 34vw;
         }
     }
 }

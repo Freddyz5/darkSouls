@@ -1,19 +1,36 @@
 //? Pantalla de carga
-const logo = document.querySelector('.svgLogo')
+const logo = document.querySelector('.svgLogo');
 const intro = document.querySelector('.intro');
 var executed = false;
 
-addEventListener("keydown", function(e) {
-    e.preventDefault();
-    if ( e.code == 'Enter' && executed == true) {
-        intro.style.transition = '1.5s';
-        intro.style.opacity = '0'
-        intro.style.visibility = 'hidden';
-    }if ( e.code == 'Escape') {
-        intro.style.visibility = 'visible';
-        intro.style.opacity = '1';
-    }
-});
+function interaction (evento){
+    if (evento === "touchstart"){
+        addEventListener("touchstart", function(e) {
+            animacion("Enter");
+        });
+    } else {
+        addEventListener("keydown", function(e) {
+            e.preventDefault();
+            if ( e.code == 'Enter' && executed == true) {
+                animacion("Enter");
+            }if ( e.code == 'Escape') {
+                animacion("Escape");
+            }
+        });
+    };
+    function animacion(tecla){
+        if(tecla === "Enter") {
+            intro.style.transition = '1.5s';
+            intro.style.opacity = '0'
+            intro.style.visibility = 'hidden';
+        } else {
+            intro.style.visibility = 'visible';
+            intro.style.opacity = '1';
+        };
+    };
+};
+interaction("keydown");
+interaction("touchstart");
 
 anime ({
     targets: '.svgLogo',
@@ -29,7 +46,23 @@ anime ({
     easing: 'easeInExpo',
     duration: 11000,
     direction: 'reverse',
-})
+});
+
+if(screen.width <= 900){
+    document.getElementById("mensaje").innerHTML = "Toca la pantalla";
+    caption.style.backgroundColor = "aqua";
+};
+
+
+
+
+
+
+
+
+
+
+
 
 //? Animación bonfire pendiente
 // var bonfire = document.querySelector('.fire');
