@@ -2,14 +2,14 @@
 @font-face {
     font-family: 'darkSouls';
     /*? Liver Server OFF */
-    src: url('/font/Optimus-Princeps-Font/OptimusPrinceps.ttf');
+    src: url('./font/Optimus-Princeps-Font/OptimusPrinceps.ttf');
     font-weight: normal;
     font-style: normal;
 }    
 @font-face {
     font-family: 'darkSoulsBold';
     /*? Liver Server OFF */
-    src: url('/font/Optimus-Princeps-Font/OptimusPrincepsSemiBold.ttf');
+    src: url('./font/Optimus-Princeps-Font/OptimusPrincepsSemiBold.ttf');
     font-weight: bold;
     font-style: bold;
 }
@@ -64,7 +64,7 @@ body, html{
 }
 /***********************************/
 .sec1{
-    background-image: url(/historia/img/1.png);
+    background-image: url(./img/1.png);
     min-height: 100%;
 }
 .sec1 .caption{
@@ -76,7 +76,7 @@ body, html{
 /***********************************/
 .div1{
     position: relative;
-    background-image: url(/historia/img/2.png);
+    background-image: url(./img/2.png);
     min-height: 100%;
     display: grid;
     /* border: 1px solid #513D34; */
@@ -92,7 +92,7 @@ body, html{
 }
 /***********************************/
 .sec2{
-    background-image: url(/historia/img/7.png);
+    background-image: url(./img/7.png);
     min-height: 100%;
     display: grid;
 }
@@ -114,7 +114,7 @@ body, html{
 /***********************************/
 .div2{
     position: relative;
-    background-image: url(/historia/img/8.png);
+    background-image: url(./img/8.png);
     min-height: 100%;
 }
 .div2 .caption{
@@ -126,7 +126,7 @@ body, html{
 }
 /***********************************/
 .sec3{
-    background-image: url(/historia/img/9.png);
+    background-image: url(./img/9.png);
     min-height: 100%;
 }
 .sec3 .caption{
@@ -148,7 +148,7 @@ body, html{
 /***********************************/
 .div3{
     position: relative;
-    background-image: url(/historia/img/11.png);
+    background-image: url(./img/11.png);
     min-height: 100%;
 }
 .div3 .caption{
@@ -158,7 +158,7 @@ body, html{
 }
 /***********************************/
 .sec4{
-    background-image: url(/historia/img/14.png);
+    background-image: url(./img/14.png);
     min-height: 100%;
 }
 .sec4 .caption{
@@ -169,7 +169,7 @@ body, html{
 }
 /***********************************/
 .footer{
-    background-image: url(/historia/img/14.png);
+    background-image: url(./img/14.png);
 }
 .footer .footer-div{
     display: grid;
