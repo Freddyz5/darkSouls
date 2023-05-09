@@ -12,6 +12,14 @@
     font-weight: bold;
     font-style: bold;
 }
+body, html{
+    font-family: 'darkSouls';
+    background-color: #000000;
+    overflow-x: hidden;
+    height: 100%;
+    margin: 0;
+    overflow-x: hidden;
+}
 * {
     margin: 0;
     padding: 0;
@@ -25,10 +33,6 @@ img , figure{
     display: flex;
     object-fit: cover;
     object-position: center center;
-}
-body {
-    font-family: 'darkSouls';
-    background-color: #000000;
 }
 /***********************************/
 .intro{
@@ -64,18 +68,19 @@ body {
     color: #f0eaf2;
 }
 /***********************************/
-.main .div{
-    height: 100%;
-    overflow: hidden;
-    box-shadow: 0 2px 8px #CA9F72;
-    margin-bottom: 2px;
+.main, .div, .img3 {
+    position: relative;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
-.main .figure{
-    display: grid;
-    place-items: center;
-}
-.main .img{
-    object-view-box: inset(11% 0% 0% 0%);
+/***********************************/
+.main{
+    background-image: url("https://images2.alphacoders.com/895/895681.jpg");
+    background-size: 99%;
+    background-position: 0% 100%;
+    min-height: 100%;
 }
 .main .caption{
     position: absolute;
@@ -87,31 +92,102 @@ body {
     color: #f0eaf2;
     text-shadow:  #ec9633 0 0 5px;
 }
-.main .fire{
+/*! cambiar valores de indicador de scroll a valores responsive */
+.scroll {
+    top: 16vw;
+    left: 49%;
+	width: 60px;
+	height: 60px;
+	border: 2px solid #f0eaf2;
+	border-radius: 50%;
+	position: absolute;
+	animation: down 1.7s infinite;
+	-webkit-animation: down 1.7s infinite;
+	&::before {
+		content: '';
+		position: absolute;
+		top: 15px;
+		left: 18px;
+		width: 18px;
+		height: 18px;
+		border-left: 2px solid #f0eaf2;
+        border-bottom: 2px solid #f0eaf2;
+		transform: rotate(-45deg);
+	}
+}
+@keyframes down {
+	0% {
+		transform: translate(0);
+        opacity: 1;
+	}
+	20% {
+		transform: translateY(200px);
+	}
+    50%{
+        opacity: 0;
+    }
+	40% {
+        transform: translate(0);
+	}
+}
+@-webkit-keyframes down {
+    0% {
+        transform: translate(0);
+        opacity: 1;
+	}
+	20% {
+        transform: translateY(200px);
+	}
+    50%{
+        opacity: 0;
+    }
+	40% {
+        transform: translate(0);
+	}
+}
+/*! cambiar valores de indicador de scroll a valores responsive */
+.fire{
     position: absolute;
-    top: 41vw;
+    top: 39vw;
     left: 50%;
-    border-radius: 10px;
-    width: 20px;
-    height: 20px;
-    background-color: #ff00ff;
 }
 /***********************************/
-.section{
-    background-image: url('https://images3.alphacoders.com/154/154277.jpg');
-    background-repeat: no-repeat;
-    object-fit: cover;
+.div{
+    background-image: url("https://images2.alphacoders.com/895/895681.jpg");
+    background-size: 99%;
+    background-position: 0% 100%;
+    height: 70vw;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 50px #000000;
+}
+.div-img{
+    position: absolute;
+    width: 100%;
+    object-view-box: inset(0% 30% 30% 30%);
+}
+/***********************************/
+.img3{
+    background-image: url("https://images3.alphacoders.com/154/154277.jpg");
+    min-height: 50vw;
     background-size: 130%;
-    background-position: 0% 20%;
+    background-position: 0% 35%;
+    box-shadow: inset 0 0 70px #000000;
 }
 .content{
     position: relative;
     display: grid;
-    width: 44%;
-    height: 100%;
+    /* width: 44%;
+    height: 100%; */
     margin: auto 1vw;
     padding: 4vw;
     gap: 3vw;
+}
+.content .empty{
+    width: 0;
+    height: 0;
 }
 .content .p{
     text-align: justify;
@@ -124,10 +200,6 @@ body {
     padding: 0.5em;
     border-radius: 0.2em;
 }
-.content .empty{
-    width: 0;
-    height: 0;
-}
 .content .video{
     width: 35vw;
     height: 20vw;
@@ -136,7 +208,7 @@ body {
 .footer{
     position: relative;
 }
-.footer .div{
+.footer .menu-div{
     display: grid;
     place-items: center;
     padding: 1em 18vw;
@@ -153,9 +225,11 @@ body {
     border-radius: 1px;
     background-color: #5A290B;
     border-bottom: 0;
+    transition: 0.5s;
 }
+
 /***********************************/
-@media screen and (max-width: 1200px) {
+/* @media screen and (max-width: 1200px) {
     .main .div{
         height: 92vw;
     }
@@ -233,4 +307,4 @@ body {
             bottom: 34vw;
         }
     }
-}
+} */

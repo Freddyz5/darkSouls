@@ -2,14 +2,14 @@
 @font-face {
     font-family: 'darkSouls';
     /*? Liver Server OFF */
-    src: url('font/Optimus-Princeps-Font/OptimusPrinceps.ttf');
+    src: url('/font/Optimus-Princeps-Font/OptimusPrinceps.ttf');
     font-weight: normal;
     font-style: normal;
 }    
 @font-face {
     font-family: 'darkSoulsBold';
     /*? Liver Server OFF */
-    src: url('font/Optimus-Princeps-Font/OptimusPrincepsSemiBold.ttf');
+    src: url('/font/Optimus-Princeps-Font/OptimusPrincepsSemiBold.ttf');
     font-weight: bold;
     font-style: bold;
 }
@@ -27,24 +27,25 @@ img , figure{
     object-fit: cover;
     object-position: center center;
 }
-body {
+body, html{
     font-family: 'darkSouls';
     background-color: #000000;
+    overflow-x: hidden;
+    height: 100%;
+    margin: 0;
+    overflow-x: hidden;
 }
 /***********************************/
-.main{
-    display: grid;
-    place-items: center;
+.sec1, .sec2, .sec3, .sec4, .footer{
+    position: relative;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
-.main .img{
-    margin: auto;
-    width: 100vw;
-    height: 47vw;
-}   
-.main .caption{
+.caption, .caption1, .caption2{
     position: absolute;
     text-align: justify;
-    width: 45vw;
     font-size: 1.5vw;
     text-shadow: #ec9633 0 0 5px;
     color: #f0eaf2;
@@ -53,44 +54,124 @@ body {
     padding: 0.5em;
     border-radius: 0.2em;
 }
-.antigua{
-    background-color: #335eec9f;
+.figure{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    justify-self: center;
+    width: 98%;
+    gap: 0.5vw;
 }
-.antigua .figure{}
-.antigua .img{}
-.antigua .caption{
-    top: 10%;
+/***********************************/
+.sec1{
+    background-image: url(/historia/img/1.png);
+    min-height: 100%;
+}
+.sec1 .caption{
+    top: 15%;
     left: 5%;
+    width: 55vw;
+    font-size: 2vw;
 }
-
-.oscura{
-    background-color: #33d6ec9f;
+/***********************************/
+.div1{
+    position: relative;
+    background-image: url(/historia/img/2.png);
+    min-height: 100%;
+    display: grid;
+    /* border: 1px solid #513D34; */
 }
-.oscura .figure{}
-.oscura .img{}
-.oscura .caption{
-    top: 140%;
+.div1 .caption{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40vw;
+    height: 10vw;
+    font-size: 1.5vw;
+}
+/***********************************/
+.sec2{
+    background-image: url(/historia/img/7.png);
+    min-height: 100%;
+    display: grid;
+}
+.sec2 .caption{
+    position: relative;
+    width: 40vw;
+    margin: auto;
+    grid-column: 1/4;
+    grid-row: 3;
+    background-color: #0000008c;
+}
+.sec2 .img{
+    border-radius: 10px;
+    box-shadow:  #ec9633 0 0 15px;
+}
+.sec2 .img-last{
+    grid-column: 3;
+}
+/***********************************/
+.div2{
+    position: relative;
+    background-image: url(/historia/img/8.png);
+    min-height: 100%;
+}
+.div2 .caption{
+    position: absolute;
+    top: 30%;
     left: 10%;
-    width: 75vw;
+    width: 80vw;
+    text-align: center;
 }
-
-.fuego{
-    background-color: #ec963396;
+/***********************************/
+.sec3{
+    background-image: url(/historia/img/9.png);
+    min-height: 100%;
 }
-.fuego .figure{}
-.fuego .img{}
-.fuego .caption{
-    top: 220%;
+.sec3 .caption{
+    position: absolute;
+    top: 80%;
+    left: 10%;
+    width: 80vw;
+    text-align: center;
+}
+.sec3 .img{
+    position: absolute;
+    top: 4%;
+    left: -35%;
+    width: 40vw;
+    height: 20vw;
+    border-radius: 10px;
+    box-shadow:  #ec9633 0 0 15px;
+}
+/***********************************/
+.div3{
+    position: relative;
+    background-image: url(/historia/img/11.png);
+    min-height: 100%;
+}
+.div3 .caption{
+    position: absolute;
+    bottom: 2%;
+    margin: 2vw;
+}
+/***********************************/
+.sec4{
+    background-image: url(/historia/img/14.png);
+    min-height: 100%;
+}
+.sec4 .caption{
+    position: absolute;
+    top: 60%;
     left: 25%;
+    width: 40vw;
 }
-
-
-
 /***********************************/
 .footer{
-    position: relative;
+    background-image: url(/historia/img/14.png);
 }
-.footer .div{
+.footer .footer-div{
     display: grid;
     place-items: center;
     padding: 1em 18vw;
@@ -107,4 +188,5 @@ body {
     border-radius: 1px;
     background-color: #5A290B;
     border-bottom: 0;
+    transition: 0.5s;
 }
