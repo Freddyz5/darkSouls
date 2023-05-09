@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Contacto</title>
         <link href="contacto.css" rel="stylesheet" type="text/css"/>
-        <script defer src="script.js" ></script>
+        <script defer src="contacto.js" ></script>
     </head>
 
     <body>
@@ -24,16 +24,24 @@
                 <legend class="legend">
                     <h3 class="h3">Contacto</h3>
                 </legend>
-                <form class="form"">
+                <form class="form" action="https://formsubmit.co/freddyltacuri@gmail.com" method="POST">
+                <!-- <form class="form"> -->
+
                     <label class="label">Nombre:</label>
-                    <input class="input" type="text" placeholder="Ingresa tu nombre...">
+                    <input class="input nombre" type="text" placeholder="Ingresa tu nombre..." name="name"required>
+
                     <label class="label">Apellido:</label>
-                    <input class="input" type="text" placeholder="Ingresa tu apellido..">
-                    <label class="label">Correo:</label>
-                    <input class="input" type="email" placeholder="elemplo@hotmail.com">
+                    <input class="input apellido" type="text" placeholder="Ingresa tu apellido.." name="lastName"required>
+
+                    <label class="label" id="email">Correo:</label>
+                    <input class="input correo" type="email" placeholder="elemplo@hotmail.com" name="email" required>
+
                     <label class="label comen">Comentarios:</label>
-                    <textarea class="textarea" rows="2" cols="21" placeholder="Ingresa un comentario"></textarea>
-                    <button class="button">Enviar</button>
+                    <textarea class="textarea comentarios" rows="2" cols="21" placeholder="Ingresa un comentario" name="comments"required></textarea>
+
+                    <!-- <button class="button">Enviar</button> -->
+                    <input class="button" type="submit" value="Enviar">
+
                 </form>
             </fieldset>
         </section>
