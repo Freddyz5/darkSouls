@@ -1,0 +1,173 @@
+@font-face {
+    font-family: 'darkSouls';
+    /*? Liver Server OFF */
+    src: url('/font/Optimus-Princeps-Font/OptimusPrinceps.ttf');
+    font-weight: normal;
+    font-style: normal;
+}    
+@font-face {
+    font-family: 'darkSoulsBold';
+    /*? Liver Server OFF */
+    src: url('/font/Optimus-Princeps-Font/OptimusPrincepsSemiBold.ttf');
+    font-weight: bold;
+    font-style: bold;
+}
+body, html{
+    font-family: 'darkSouls';
+    background-image: url("https://images3.alphacoders.com/212/212597.jpg");
+    background-attachment: fixed;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow-x: hidden;
+    height: 100%;
+    margin: 0;
+}
+/***********************************/
+.main{
+    display: grid;
+}
+.main .p{
+    margin-top: 3vw;
+    justify-self: center;
+    text-align: center;
+    width: 60vw;
+    font-size: 1.5em;
+    text-shadow:  #ec9633 0 0 5px;
+    color: #f0eaf2;
+
+    background-color: #0000004b;
+    padding: 0.5em;
+    border-radius: 0.2em;
+}
+/***********************************/
+.section{
+    margin: -3vw;
+    display: grid;
+    font-size: 1.5em;
+    text-shadow:  #ec9633 0 0 5px;
+    color: #f0eaf2;
+}
+.section .fieldset{
+    width: 25%;
+    align-self: center;
+    justify-self: center;
+    background-color: #0000004b;
+    border-radius: 0.4em;
+}
+.section .legend{
+    font-size: 1.5em;
+    text-shadow:  #ec9633 0 0 5px;
+    color: #f0eaf2;
+    border-radius: 0.2em;
+    text-align: center;
+}
+.section .h3{
+    background-color: #0000004b;
+    padding: 0.1em;
+    border-radius: 0.2em;
+}
+.section .form{
+    display: grid;
+    gap: 0.5vw;
+    grid-template-columns: repeat(2, 1fr);
+}
+.label, .input, .textarea{
+    font-family: 'darkSouls';
+    align-self: center;
+    justify-self: center;
+    width: 100%;
+    color: #f0eaf2;
+    text-shadow:  #ec9633 0 0 5px;
+    border-radius: 0.25em;
+}
+.section .form .label{
+    width: 5vw;
+}
+.section .form .comen{
+    grid-column: 1/3;
+    width: 35%;
+}
+.section .form .input{
+    background-color: #0000008f;
+    height: 1.5vw;
+}
+.section .form .textarea{
+    background-color: #0000008f;
+    border-bottom: 1px groove #513D34;
+    height: 5vw;
+    grid-column: 1/3;
+    font-size: 1.2vw;
+}
+.section .form .button{
+    align-self: center;
+    justify-self: center;
+    grid-column: 1/3;
+    background-color: #0000008f;
+    width: 10vw;
+    padding: 0.5vw;
+    font-size: 1.5em;
+    color: #f0eaf2;
+    text-shadow:  #ec9633 0 0 5px;
+    border-bottom: 1px groove #513D34;
+    border-radius: 0.25em;
+    font-family: 'darkSouls';
+}
+.section .button:hover{
+    border-radius: 1px;
+    background-color: #5A290B;
+    border-radius: 0.25em;
+    border-bottom: 0;
+    border-bottom: 1px solid #513D34;
+    transition: 0.5s;
+}
+/***********************************/
+.socials{
+    margin-top: 4.5vw;
+    background-color: #0000008f;
+}
+.socials .div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5em;
+}
+.socials .a {
+    padding: 0.2em;
+    transition: 1s;
+}
+.socials .img{
+    width: 2.8em;
+    padding: 0.5vw;
+    border-bottom: 1px groove #513D34;
+}
+.socials .img:hover{
+    background-color: #5A290B;
+    border-radius: 0.5vw;
+    transition: 0.5s;
+}
+/***********************************/
+.footer{
+    position: relative;
+    margin-top: 1vw;
+}
+.footer .menu-div{
+    display: grid;
+    place-items: center;
+    padding: 1em 18vw;
+    grid-template-columns: repeat(auto-fit, minmax( min(150px), 1fr));
+}
+.footer .a{
+    background-color: #00000046;
+    padding: 0 2vw;
+    font-size: 1.5em;
+    text-shadow:  #ec9633 0 0 5px;
+    color: #f0eaf2;
+    border-bottom: 1px groove #513D34;
+}
+.footer .a:hover{
+    border-radius: 1px;
+    background-color: #5A290B;
+    border-bottom: 0;
+    transition: 0.5s;
+}
